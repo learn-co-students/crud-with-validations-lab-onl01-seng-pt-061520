@@ -2,3 +2,4 @@
 <h2>Artist Name: <%= @song.artist_name %></h2>
 <h3>Genre: <%= @song.genre %></h3>
 <%= link_to "Delete #{@song.title}?", @song, method: :delete, data: { confirm: "Really?" } %>
+# use --> data: { confirm: "Message" } for javascript confirmation
