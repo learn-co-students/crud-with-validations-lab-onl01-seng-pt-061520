@@ -1,0 +1,15 @@
+<%= @songs.each do |song|%>
+<li><%= song.title %>
+    <%= song.released%>
+    <%= song.release_year%>
+    <%= song.artist_name%>
+    <%= song.genre%>
+</li>
+<%end%>
+
+<% @songs.each do |song| %>
+    <div class="song">
+      <li><%= song.title %></li>
+      <%= link_to "Destroy", song, method: :destroy, data: { confirm: "Really?" } %>
+    </div>
+    <% end %>
