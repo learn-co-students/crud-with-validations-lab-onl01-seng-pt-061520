@@ -1,7 +1,7 @@
 class Song < ApplicationRecord
   validates :title, presence: true
   validates :title, uniqueness: {
-    scope: %i[artist_name, release_year],
+    scope: %i[release_year artist_name],
     message: 'Must be unique to the artist and the year'
   }
 
@@ -17,8 +17,4 @@ class Song < ApplicationRecord
   validates :artist_name, presence: true
 
   validates :genre, presence: true
-
-  def to_s
-    title
-  end
 end
